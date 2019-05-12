@@ -1,5 +1,5 @@
 class Line
   def self.who_is_next(list, position)
-    "Sheldon"
+    list[position - 1]
   end
 end
