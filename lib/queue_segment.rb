@@ -18,4 +18,10 @@ class QueueSegment
   def contains? position
     position > offset && position - offset <= segment_length
   end
+
+  def relative_position position
+    raise ArgumentError if !contains? position
+
+    position - offset - 1
+  end
 end

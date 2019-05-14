@@ -51,4 +51,12 @@ RSpec.describe QueueSegment do
       expect(initial_segment.successor.contains? 6).to be_truthy
     end
   end
+
+  context "#relative_position" do
+    it "relative position of 6 on second segment is 0" do
+      result = initial_segment.successor.relative_position(6)
+
+      expect(result).to eq(0)
+    end
+  end
 end
