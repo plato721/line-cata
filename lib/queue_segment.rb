@@ -14,4 +14,8 @@ class QueueSegment
       offset + segment_length
     )
   end
+
+  def contains? position
+    position > offset && position - offset <= segment_length
+  end
 end
