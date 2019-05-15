@@ -24,24 +24,24 @@ RSpec.describe Line do
       expect(described_class.who_is_next(names, 2)).to eql("Leonard")
     end
 
-    xit "sixth person is Leonard" do
-      expect(described_class.who_is_next(names, 6)).to eql("Leonard")
+    it "sixth person is Sheldon" do
+      expect(described_class.who_is_next(names, 6)).to eql("Sheldon")
     end
 
-    xit "seventh person is Leonard" do
-      expect(described_class.who_is_next(names,   7)).to eql("Leonard")
+    it "seventh person is Sheldon" do
+      expect(described_class.who_is_next(names, 7)).to eql("Sheldon")
     end
 
-    xit "eighth person is Penny" do
-      expect(described_class.who_is_next(names, 8)).to eql("Penny")
+    it "eighth person is Leonard" do
+      expect(described_class.who_is_next(names, 8)).to eql("Leonard")
     end
 
 
-    xit "52nd is Penny" do
+    it "52nd is Penny" do
       expect(described_class.who_is_next(names, 52)).to eql("Penny")
     end
 
-    xit "7230702951st is Leonard" do
+    it "7230702951st is Leonard" do
       expect(described_class.who_is_next(names, 7230702951)).to eql("Leonard")
     end
   end
