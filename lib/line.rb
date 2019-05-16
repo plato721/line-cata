@@ -11,11 +11,15 @@ class Line
     private
 
     def build_segments_and_find(length, position)
-      current_segment = QueueSegment.new(0, length, 0)
-      loop do
-        return current_segment if current_segment.contains? position
+      initial_segment = QueueSegment.new(0, length, 0)
+      _build_segments_and_find(initial_segment, position)
+    end
 
-        current_segment = current_segment.successor
+    def _build_segments_and_find(current_segment, position)
+      if current_segment.contains?(position)
+        current_segment
+      else
+        _build_segments_and_find(current_segment.successor, position)
       end
     end
 
